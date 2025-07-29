@@ -1,8 +1,8 @@
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../auth/[...nextauth]/route";
 import { NextResponse } from "next/server";
 import { connectToDB } from "@/utils/database";
 import Contact from "@/models/contact";
+import { authOptions } from "@/utils/auth";
 
 export const GET = async () => {
   const session = await getServerSession(authOptions);
